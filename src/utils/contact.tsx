@@ -1,3 +1,6 @@
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+
 export default function Contact() {
   return (
     <section id="contact" className="py-20 px-4 bg-[#0d1117]">
@@ -19,29 +22,17 @@ export default function Contact() {
         </a>
 
         <div className="flex justify-center gap-8 mt-10">
-          <a
-            href="https://github.com/VeekAustin"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#8b949e] hover:text-[#238636] transition-colors font-medium"
-          >
-            GitHub
+          <a href="https://github.com/VeekAustin" target="_blank" rel="noopener noreferrer"
+            aria-label="GitHub" className="text-[#8b949e] hover:text-[#238636] transition-colors">
+            <FaGithub size={24} />
           </a>
-          <a
-            href="https://linkedin.com/in/victoraugustine"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#8b949e] hover:text-[#238636] transition-colors font-medium"
-          >
-            LinkedIn
+          <a href="https://linkedin.com/in/victoraugustine" target="_blank" rel="noopener noreferrer"
+            aria-label="LinkedIn" className="text-[#8b949e] hover:text-[#238636] transition-colors">
+            <FaLinkedin size={24} />
           </a>
-          <a
-            href="https://x.com/Austin486295292"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#8b949e] hover:text-[#238636] transition-colors font-medium"
-          >
-            Twitter / X
+          <a href="https://x.com/Austin486295292" target="_blank" rel="noopener noreferrer"
+            aria-label="Twitter / X" className="text-[#8b949e] hover:text-[#238636] transition-colors">
+            <FaXTwitter size={24} />
           </a>
         </div>
       </div>

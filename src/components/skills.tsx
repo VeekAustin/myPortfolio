@@ -1,12 +1,41 @@
+import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiNodedotjs, SiExpress, SiPostgresql, SiPrisma, SiGit, SiDocker, SiVercel, SiFigma, } from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
+
+
 interface SkillCategory {
   category: string;
-  items: string[];
+  items: { name: string; icon: React.ReactNode }[];
 }
 
 const skills: SkillCategory[] = [
-  { category: "Frontend", items: ["React", "Next.js", "TypeScript", "Tailwind CSS"] },
-  { category: "Backend",  items: ["Node.js", "Express", "PostgreSQL", "Prisma"] },
-  { category: "Tools",    items: ["Git", "Docker", "Vercel", "Figma", "VS Code"] },
+  {
+    category: "Frontend",
+    items: [
+      { name: "React",       icon: <SiReact /> },
+      { name: "Next.js",     icon: <SiNextdotjs /> },
+      { name: "TypeScript",  icon: <SiTypescript /> },
+      { name: "Tailwind CSS", icon: <SiTailwindcss /> },
+    ],
+  },
+  {
+    category: "Backend",
+    items: [
+      { name: "Node.js",    icon: <SiNodedotjs /> },
+      { name: "Express",    icon: <SiExpress /> },
+      { name: "PostgreSQL", icon: <SiPostgresql /> },
+      { name: "Prisma",     icon: <SiPrisma /> },
+    ],
+  },
+  {
+    category: "Tools",
+    items: [
+      { name: "Git",     icon: <SiGit /> },
+      { name: "Docker",  icon: <SiDocker /> },
+      { name: "Vercel",  icon: <SiVercel /> },
+      { name: "Figma",   icon: <SiFigma /> },
+      { name: "VS Code", icon: <VscVscode /> },
+    ],
+  },
 ];
 
 export default function Skills() {
@@ -27,10 +56,10 @@ export default function Skills() {
             >
               <h3 className="font-bold text-[#238636] mb-4 text-lg">{category}</h3>
               <ul className="space-y-3">
-                {items.map((skill) => (
-                  <li key={skill} className="flex items-center gap-3 text-[#8b949e]">
-                    <span className="w-1.5 h-1.5 bg-[#238636] rounded-full shrink-0" />
-                    {skill}
+                {items.map(({ name, icon }) => (
+                  <li key={name} className="flex items-center gap-3 text-[#8b949e]">
+                    <span className="text-[#238636] text-lg">{icon}</span>
+                    {name}
                   </li>
                 ))}
               </ul>
