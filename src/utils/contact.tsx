@@ -1,29 +1,47 @@
 export default function Contact() {
   return (
-    <section id='contact' className='py-20 px-4 bg-white'>
-      <div className='max-w-2xl mx-auto text-center'>
-        <h2 className='text-4xl font-bold text-gray-900 mb-4'>Get In Touch</h2>
-        <p className='text-gray-600 mb-8'>
-          I am currently open to new opportunities. Feel free to reach out!
+    <section id="contact" className="py-20 px-4 bg-[#0d1117]">
+      <div className="max-w-2xl mx-auto text-center">
+        <p className="text-xs tracking-[0.2em] uppercase text-[#238636] font-medium mb-2">
+          Let's talk
         </p>
-        <a href='iniekevictor@gmail.com'
-           className='inline-block bg-blue-600 text-white px-10 py-4
-                      rounded-full text-lg font-semibold hover:bg-blue-700
-                      transition-colors'>
+        <h2 className="text-4xl font-bold text-[#f0f6fc] mb-4">Get In Touch</h2>
+        <p className="text-[#8b949e] mb-10 leading-relaxed">
+          I am currently open to new opportunities. Whether you have a project,
+          a question, or just want to say hi — my inbox is open.
+        </p>
+
+        <a
+          href="mailto:iniekevictor@gmail.com"
+          className="inline-block bg-[#238636] text-white px-10 py-4 rounded-full text-lg font-semibold hover:bg-[#2ea043] transition-colors"
+        >
           Say Hello
         </a>
-        <div className='flex justify-center gap-8 mt-10'>
-          <a href='https://github.com/VeekAustin'
-             className='text-gray-500 hover:text-gray-900 transition-colors'>
+
+        <div className="flex justify-center gap-8 mt-10">
+          <a
+            href="https://github.com/VeekAustin"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#8b949e] hover:text-[#238636] transition-colors font-medium"
+          >
             GitHub
           </a>
-          <a href='https://linkedin.com/in/victoraugustine'
-             className='text-gray-500 hover:text-gray-900 transition-colors'>
+          <a
+            href="https://linkedin.com/in/victoraugustine"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#8b949e] hover:text-[#238636] transition-colors font-medium"
+          >
             LinkedIn
           </a>
-          <a href='https://x.com/Austin486295292'
-             className='text-gray-500 hover:text-gray-900 transition-colors'>
-            Twitter/x
+          <a
+            href="https://x.com/Austin486295292"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[#8b949e] hover:text-[#238636] transition-colors font-medium"
+          >
+            Twitter / X
           </a>
         </div>
       </div>

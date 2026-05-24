@@ -1,14 +1,10 @@
-// Footer.tsx
-// Place in: app/components/Footer.tsx (or wherever your components live)
-// Usage: <Footer /> in your layout.tsx or any page
-
 import Link from "next/link";
 
 const navLinks = [
-  { label: "About", href: "#about" },
+  { label: "About",    href: "#about" },
   { label: "Projects", href: "#projects" },
-  { label: "Skills", href: "#skills" },
-  { label: "Contact", href: "#contact" },
+  { label: "Skills",   href: "#skills" },
+  { label: "Contact",  href: "#contact" },
 ];
 
 const socialLinks = [
@@ -45,30 +41,27 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-950">
+    <footer className="border-t border-[#1a2e1e] bg-[#0d1117]">
       <div className="max-w-5xl mx-auto px-6 py-12">
 
         {/* Top row */}
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-8">
-
-          {/* Brand + tagline */}
           <div className="space-y-2">
-            <p className="text-lg font-semibold tracking-tight text-neutral-900 dark:text-neutral-100">
+            <p className="text-lg font-semibold tracking-tight text-[#f0f6fc]">
               Victor Augustine
             </p>
-            <p className="text-sm text-neutral-500 dark:text-neutral-400">
-              FullStack Developer · Building things for the web.
+            <p className="text-sm text-[#8b949e]">
+              Frontend Developer · Building things for the web.
             </p>
           </div>
 
-          {/* Nav links */}
           <nav aria-label="Footer navigation">
             <ul className="flex flex-wrap gap-x-6 gap-y-2">
               {navLinks.map((link) => (
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
+                    className="text-sm text-[#8b949e] hover:text-[#238636] transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -79,17 +72,14 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="my-8 border-t border-neutral-100 dark:border-neutral-800" />
+        <div className="my-8 border-t border-[#1a2e1e]" />
 
         {/* Bottom row */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-
-          {/* Copyright */}
-          <p className="text-xs text-neutral-400 dark:text-neutral-500">
+          <p className="text-xs text-[#484f58]">
             &copy; {currentYear} Victor Augustine. All rights reserved.
           </p>
 
-          {/* Social icons */}
           <div className="flex items-center gap-4">
             {socialLinks.map((social) => (
               <a
@@ -98,14 +88,13 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.label}
-                className="text-neutral-400 dark:text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100 transition-colors"
+                className="text-[#484f58] hover:text-[#238636] transition-colors"
               >
                 {social.icon}
               </a>
             ))}
           </div>
         </div>
-
       </div>
     </footer>
   );
