@@ -1,7 +1,7 @@
 const timeline = [
-  { year: "2024", event: "Learned Next.js App Router and TypeScript deeply" },
-  { year: "2023", event: "Built first full-stack app with React and a REST API" },
-  { year: "2022", event: "Started learning web development with HTML, CSS & JavaScript" },
+  { year: "2026", event: "Learned Next.js App Router and TypeScript deeply" },
+  { year: "2025", event: "Built first full-stack app with React and a REST API" },
+  { year: "2024", event: "Started learning web development with HTML, CSS & JavaScript" },
   { year: "2021", event: "Discovered programming — wrote my first Python script" },
 ];
 
@@ -32,7 +32,7 @@ export default function About() {
             </p>
             <p className="text-base text-[#8b949e] leading-[1.85]">
               Right now I'm focused on the Next.js ecosystem: App Router, server components,
-              TypeScript, and Tailwind CSS. This very site is one of my learning projects.
+              TypeScript, and Tailwind CSS.
             </p>
           </div>
 
