@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framermotion";
-import { FiMessageCircle, FiMail, FiX } from "reacticons/fi";
+import { AnimatePresence, motion } from "framer-motion";
+import { FiMessageCircle, FiMail, FiX } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 
 const EMAIL = "iniekevictor@gmail.com";
