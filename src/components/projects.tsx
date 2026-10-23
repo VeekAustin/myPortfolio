@@ -9,6 +9,7 @@ interface Project {
   tech: string[];
   liveUrl?: string;
   repoUrl?: string;
+  repos?: { label: string; href: string }[];
   image?: string; 
   featured?: boolean;
 }
@@ -27,7 +28,10 @@ const projects: Project[] = [
     ],
     tech: ["Next.js", "TypeScript", "Node.js", "Express", "MongoDB", "JWT"],
     liveUrl: "https://trackr-web-sigma.vercel.app/", 
-    repoUrl: "https://github.com/VeekAustin/trackr-web, https://github.com/VeekAustin/trackr-api", 
+    repos: [
+      { label: "Frontend", href: "https://github.com/VeekAustin/trackr-web" },
+      { label: "API", href: "https://github.com/VeekAustin/trackr-api" },
+    ],
     image: "/trackr.png",
     featured: true,
   },
@@ -36,7 +40,7 @@ const projects: Project[] = [
     description: "A pixel-accurate rebuild of a SaaS marketing page.",
     what: "Built every section, including the hero, testimonials, integrations grid, and footer, without a UI kit. Focused on responsive breakpoints and reusable components.",
     tech: ["Next.js", "TypeScript", "Tailwind CSS"],
-    liveUrl: "https://next-js-static-clone page.vercel.app/",
+    liveUrl: "https://next-js-static-clone-page.vercel.app/",
     repoUrl: "https://github.com/VeekAustin/nextJsStaticClonePage",
   },
 ];
@@ -115,16 +119,17 @@ export default function Projects() {
                       Live Demo →
                     </a>
                   )}
-                  {project.repoUrl && (
+                  {(project.repos ?? (project.repoUrl ? [{ label: "GitHub", href: project.repoUrl }] : [])).map((r) => (
                     <a
-                      href={project.repoUrl}
+                      key={r.href}
+                      href={r.href}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-sm font-medium text-[#8b949e] transition-colors hover:text-[#c9d1d9]"
                     >
-                      GitHub →
+                      {r.label} →
                     </a>
-                  )}
+                  ))}
                 </div>
               </div>
             </Reveal>

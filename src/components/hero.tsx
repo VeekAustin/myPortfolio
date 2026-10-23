@@ -2,6 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
+import { CV_PATH } from "../utils/links";
 
 const container: Variants = {
   hidden: {},
@@ -64,7 +65,7 @@ export default function Hero() {
           className="mx-auto mb-10 max-w-xl text-lg leading-relaxed text-[#8b949e]"
         >
           I build full-stack web apps with React, Next.js, TypeScript, Node.js,
-          prisma and MongoDB.
+          Prisma and MongoDB.
         </motion.p>
         <motion.div
           variants={item}
@@ -77,7 +78,7 @@ export default function Hero() {
             View My Work
           </Link>
           <a
-            href="/Victor-Augustine-Inieke-CV.pdf"
+            href={CV_PATH}
             download
             className="rounded-full border border[#30363d] px-8 py-3 font-semibold text-[#c9d1d9] transition-colors hover:border-[#238636] hover:text[#f0f6fc]"
           >

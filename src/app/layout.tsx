@@ -3,11 +3,12 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "../utils/navbar";
 import Footer from "../components/footer";
+import FloatingChat from "../components/floating-chat";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Victor Augustine's Portfolio",
+  title: "Victor Augustine Inieke | Fullstack Developer",
   description: "FullStack Developer Portfolio — Built with Next.js, Tailwind CSS, App Router",
 };
 
@@ -20,6 +21,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <FloatingChat />
       </body>
     </html>
   );

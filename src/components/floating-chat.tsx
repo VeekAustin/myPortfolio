@@ -5,7 +5,6 @@ import { FiMessageCircle, FiMail, FiX } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 
 const EMAIL = "iniekevictor@gmail.com";
-// TODO: country code + number, no "+" or spaces, e.g."2348012345678"
 
 const WHATSAPP_NUMBER = "2347071724882";
 
@@ -82,7 +81,7 @@ export default function FloatingChat() {
             className="absolute inset-0 rounded-full bg-[#238636] opacity-40 motion-safe:animate-ping"
           />
         )}
-        <span className="relative text-xl">
+        <span className="relative flex items-center justify-center text-xl leading-none">
           {open ? <FiX /> : <FiMessageCircle />}
         </span>
       </button>

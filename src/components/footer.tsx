@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { GITHUB_URL, LINKEDIN_URL, X_URL } from "../utils/links";
+import { GITHUB_URL, WhatsApp_URL, X_URL } from "../utils/links";
 // "/#id" so these also work when you are on /about
 const navLinks = [
 { label: "About", href: "/about" },
@@ -12,7 +12,7 @@ const navLinks = [
 ];
 const socialLinks = [
   { label: "GitHub", href: GITHUB_URL, icon: <FaGithub size={18} /> },
-  { label: "LinkedIn", href: LINKEDIN_URL, icon: <FaLinkedin size={18} /> },
+  { label: "WhatsApp", href: WhatsApp_URL, icon: <FaWhatsapp size={18} /> },
   { label: "Twitter / X", href: X_URL, icon: <FaXTwitter size={18} /> },
 ];
 export default function Footer() {

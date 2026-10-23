@@ -1,11 +1,11 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaWhatsapp } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Reveal from "../components/reveal";
-import { CV_PATH, EMAIL, GITHUB_URL, LINKEDIN_URL, X_URL } from "./links";
+import { CV_PATH, EMAIL, GITHUB_URL, WhatsApp_URL, X_URL } from "./links";
 
 const socials = [
   { label: "GitHub", href: GITHUB_URL, icon: <FaGithub   size={24} /> },
-  { label: "LinkedIn", href: LINKEDIN_URL, icon:   <FaLinkedin size={24} /> },
+  { label: "WhatsApp", href: WhatsApp_URL, icon: <FaWhatsapp size={24} /> },
   { label: "Twitter / X", href: X_URL, icon:   <FaXTwitter size={24} /> },
 ];
 
