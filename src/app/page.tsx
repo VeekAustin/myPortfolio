@@ -2,6 +2,7 @@ import Hero from "../components/hero";
 import Projects from "../components/projects";
 import Skills from "../components/skills";
 import Services from "../components/services";
+import GithubActivity from "../components/github-activity";
 import Contact from "../utils/contact";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <Projects />
       <Skills />
       <Services />
+      <GithubActivity />
       <Contact />
     </div>
   );
